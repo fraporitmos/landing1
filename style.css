@@ -1,0 +1,252 @@
+/*
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+    column-gap: 12px;
+    gap: 28px;
+    align-content: center;
+    justify-content: center
+}
+
+.container-grid div{
+    border: 1px solid orange;
+}
+
+@media only screen and (max-width: 600px) {
+.container-grid{
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+*/
+
+ /*Alinea al main axis*/
+/*justify-content: center;*/
+
+/*Alinea al coss axis*/
+ /* align-items: baseline;*/
+ @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+ *{
+    padding:0 ;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+ }
+
+ body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+ }
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+   position: sticky;
+   top: 0;
+   /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.729);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header ul{
+    list-style: none;
+}
+
+
+.header a{
+    text-decoration: none;
+    color: #4E4E5D;
+    transition:ease  0.5s;
+}
+
+.header a:hover{
+    color: #00C495;
+    transition: ease 0.5s;
+
+}
+.header-1{
+    width: 40%;
+}
+.nav-main{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.header-2{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.start-button{
+    margin-left: 28px;
+}
+
+.nav-burger{
+
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    padding: 12px;
+   position: sticky;
+   top: 0;
+   /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.729);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.nav-burger  a{
+    text-decoration: none;
+    color: #4E4E5D;
+    transition:ease  0.5s;
+}
+
+.nav-burger  ul{
+    list-style: none;
+}
+
+.menu i{
+    font-size: 28px;
+}
+
+.menu i:hover{
+    color: #00C495
+}
+
+
+.container-grid-banner{
+    display: grid;
+    grid-template-columns: 50% 30%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+ 
+}
+
+.container-grid-banner img{
+    width: 100%;
+    border-radius: 24px;
+}
+
+.banner{
+    background-color: white;
+    margin: 18px;
+    border-radius: 24px;
+    box-shadow: 4px 4px 15px rgb(0, 0, 0, 0.1);
+}
+
+.banner p{
+    font-size: 12px;
+    color: #A5ACC4;
+    padding: 18px
+}
+.banner h4{
+    font-size: 24px;
+    color: #434249;
+    padding: 18px;
+    word-break: keep-all;
+
+}
+.card{
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: #F7F8FC;
+    padding: 2em;
+    transition: 0.5s;
+
+}
+.product-tag{
+    color: #00C495;
+}
+.products-container{
+    display: grid;
+    width: 250px;
+    margin-left: 2em;
+    grid-auto-rows: 120px;
+    row-gap: 10px;
+    align-items: center
+
+}
+
+.container-grid-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.container-grid-cards img{
+    width: 100%;
+    border-radius: 24px;
+}
+
+.more-card{
+    background-color: white;
+    margin: 18px;
+    border-radius: 24px;
+    box-shadow: 4px 4px 15px rgb(0, 0, 0, 0.1);
+}
+.more-card p{
+    font-size: 8px;
+    color: #A5ACC4;
+    padding: 18px
+}
+.more-card h4{
+    font-size: 16px;
+    color: #434249;
+    padding: 18px;
+    word-break: keep-all;
+
+}
+
+@media only screen and (max-width: 1100px) {
+    .header-1{
+        width: 55%;
+    }
+
+    .header-2{
+       display: none;
+    }
+  
+    .container-grid-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header{
+        display: none;
+    }
+ .nav-burger{
+    display: flex;
+ }
+
+ .container-grid-banner{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+}
+
